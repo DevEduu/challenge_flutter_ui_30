@@ -36,7 +36,7 @@ List<User> users = [
       name: "Fernanda",
       idade: 25,
       urlPhoto:
-      "https://extra.globo.com/incoming/23092382-921-da4/w448/foto.jpeg.jpg"),
+      "https://i.pinimg.com/736x/9c/9e/b0/9c9eb0654aed1d155ee6de3adf74657c.jpg"),
 
   User(
       name: "Viviane",
