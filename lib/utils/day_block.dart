@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 
 class DayBlock extends StatelessWidget {
   int numberDay;
+  String date;
+  String nameChallenge;
   void Function() onTap;
 
-  DayBlock({super.key, required this.numberDay, required this.onTap});
+  DayBlock({super.key, required this.numberDay, required this.onTap,required this.date, required this.nameChallenge});
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +22,26 @@ class DayBlock extends StatelessWidget {
           color: Colors.blue,
         ),
         child: Center(
-          child: NText(
-            text: "$numberDay",
+          child: Column(
+            children: [
+              NText(
+                text: "$numberDay",
+                color: Colors.white,
+                fontSize: 32,
+                fontWeight: FontWeight.bold,
+              ),
+          NText(
+            text: date,
             color: Colors.white,
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
+            fontSize: 16
+          ),
+              NText(
+                  text: nameChallenge,
+                  color: Colors.white,
+                  fontSize: 12
+              ),
+
+            ],
           ),
         ),
       ),

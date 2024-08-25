@@ -31,6 +31,9 @@ class ListDayApp extends StatelessWidget {
       ),
       body: DayBlock(
         numberDay: 1,
+        date: "25/08/2024",
+        nameChallenge: "Socialize Chats",
+
         onTap: ()=> Get.toNamed('/01'),
       ),
     );
