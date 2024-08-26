@@ -40,32 +40,40 @@ class SocializeChat extends StatelessWidget {
               shrinkWrap: true,
               itemCount: users.length,
               itemBuilder: (context, index) {
-                return Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: AnimatedContainer(
-                        duration: const Duration(milliseconds: 100),
-                        width: keyboardHeight > 0
-                            ? availableHeight * 0.1
-                            : availableHeight * 0.1,
-                        height: keyboardHeight > 0
-                            ? availableHeight * 0.1
-                            : availableHeight * 0.1,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(10),
-                          child: Image.network(
-                              fit: BoxFit.cover, users[index].urlPhoto),
+                return GestureDetector(
+                  onTap: () {
+                    Get.toNamed('/01/01.2', arguments:
+
+                     index
+                    );
+                  },
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: AnimatedContainer(
+                          duration: const Duration(milliseconds: 100),
+                          width: keyboardHeight > 0
+                              ? availableHeight * 0.1
+                              : availableHeight * 0.1,
+                          height: keyboardHeight > 0
+                              ? availableHeight * 0.1
+                              : availableHeight * 0.1,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(10),
+                            child: Image.network(
+                                fit: BoxFit.cover, users[index].urlPhoto),
+                          ),
                         ),
                       ),
-                    ),
-                    NText(
-                      text: users[index].name,
-                    ),
-                    NText(
-                      text: users[index].idade.toString(),
-                    ),
-                  ],
+                      NText(
+                        text: users[index].name,
+                      ),
+                      NText(
+                        text: users[index].idade.toString(),
+                      ),
+                    ],
+                  ),
                 );
               },
             ),
@@ -84,53 +92,59 @@ class SocializeChat extends StatelessWidget {
               shrinkWrap: true,
               itemCount: users.length,
               itemBuilder: (context, index) {
-                return Card(
-                  color: Colors.transparent.withOpacity(0.5),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Flexible(
-                        flex: 2,
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: SizedBox(
-                            width: 50,
-                            height: 50,
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(100),
-                              child: Image.network(
-                                users[index].urlPhoto,
-                                fit: BoxFit.cover,
+                return GestureDetector(
+                  onTap: () {
+                    Get.toNamed('/01/01.2', arguments: index);
+                  },
+                  child: Card(
+                    color: Colors.transparent.withOpacity(0.5),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Flexible(
+                          flex: 2,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: SizedBox(
+                              width: 50,
+                              height: 50,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(100),
+                                child: Image.network(
+                                  users[index].urlPhoto,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
                           ),
                         ),
-                      ),
-                      const Gap(10),
-                      Expanded(
-                        flex: 5,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            NText(
-                              text: users[index].name,
-                              color: const Color(0xFFa8a8a8),
-                            ),
-                            SizedBox(
+                        const Gap(10),
+                        Expanded(
+                          flex: 5,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              NText(
+                                text: users[index].name,
+                                color: const Color(0xFFa8a8a8),
+                              ),
+                              SizedBox(
                                 width: MediaQuery.of(context).size.width * 0.82,
                                 child: NText(
                                     color: const Color(0xFF575757),
                                     text:
-                                        'Lorem Ipsum is simply dummy text of the printing  industry.')),
-                          ],
+                                        'Lorem Ipsum is simply dummy text of the printing  industry.'),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                      Expanded(
-                          child: NText(
-                        text: 'Time',
-                        color: const Color(0xFFa8a8a8),
-                      ))
-                    ],
+                        Expanded(
+                            child: NText(
+                          text: 'Time',
+                          color: const Color(0xFFa8a8a8),
+                        ))
+                      ],
+                    ),
                   ),
                 );
               },

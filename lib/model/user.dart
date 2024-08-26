@@ -16,7 +16,7 @@ List<User> users = [
       name: "Ella",
       idade: 69,
       urlPhoto:
-      "https://i.pinimg.com/736x/ee/ab/58/eeab58a82ccf41f5c12419ec08ada5eb.jpg"),
+      "https://i.pinimg.com/originals/b3/18/9d/b3189d1fffc9725595298dbee8fb1959.jpg"),
   User(
       name: "Jane",
       idade: 45,
@@ -52,7 +52,7 @@ List<User> users = [
       name: "Julia",
       idade: 26,
       urlPhoto:
-      "https://i.pinimg.com/236x/e6/6e/6c/e66e6cf42322bf54b608ea6986049482.jpg"),
+      "https://static1.purepeople.com.br/articles/4/26/68/04/@/3035117-thyane-dantas-dispara-para-colocar-uma-580x0-2.jpg"),
   User(
       name: "Jessica",
       idade: 22,
