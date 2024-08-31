@@ -153,7 +153,7 @@ class ModalUser extends StatelessWidget {
                               color: const Color(0xFF282727),
                               borderRadius: BorderRadius.circular(20)),
                           child: IconButton(
-                            onPressed: () {},
+                            onPressed: () {Get.back();},
                             icon: const FaIcon(
                               FontAwesomeIcons.x,
                               size: 15,

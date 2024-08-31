@@ -29,12 +29,21 @@ class ListDayApp extends StatelessWidget {
             fontSize: 18,
             fontWeight: FontWeight.w600),
       ),
-      body: DayBlock(
-        numberDay: 1,
-        date: "25/08/2024",
-        nameChallenge: "Socialize Chats",
+      body: Wrap(
+        children: [DayBlock(
+          numberDay: 1,
+          date: "25/08/2024",
+          nameChallenge: "Socialize Chats",
 
-        onTap: ()=> Get.toNamed('/01'),
+          onTap: ()=> Get.toNamed('/01'),
+        ),
+          DayBlock(
+            numberDay: 2,
+            date: "29/08/2024",
+            nameChallenge: "Memories App",
+
+            onTap: ()=> Get.toNamed('/02'),
+          ),]
       ),
     );
   }
